@@ -82,6 +82,12 @@ $ sudo systemctl restart docker
 #### Running Demo
 1. Download cityspaces data to OCNet/data/data
 2. Download trained model from [link](https://drive.google.com/open?id=1Kwk6yLK57ZbRk90fTwg9o1MH0Par1-v8i) to OCNet/output/checkpoint
+3. Update the file OCNet/data/dataset/list/cityscapes/demo.lst as per your requirement.
+4. Right now the OCNet/scripts/run_resnet101_baseline.sh is modified for testing purposes. NOTE : Same can be used for training after updating the paths and uncommenting the code
+5. Run OCNet/scripts/run_resnet101_baseline.sh from domain_adapt directory
+6. The semantic segmented outputs are generated in OCNet/output/visualize
+7. Run the jupyter notebook from domain_adapt directory
+8. The outputs for the GAN are generated in CycleGAN/data/my_saved_images
 
 ---
 ## Datasets
