@@ -1,0 +1,152 @@
+.
+├── CycleGAN
+│   ├── data
+│   │   ├── data_loader.py
+│   │   └── test_images
+│   ├── model
+│   │   ├── cycle_gan.py
+│   │   ├── networks.py
+│   │   ├── params.yaml
+│   │   └── saved_models
+│   │       ├── cycle_gan_un_discriminator_a.pth
+│   │       ├── cycle_gan_un_discriminator_b.pth
+│   │       ├── cycle_gan_un_epoch.txt
+│   │       ├── cycle_gan_un_generator_a.pth
+│   │       ├── cycle_gan_un_generator_b.pth
+│   │       ├── test_cycle_gan_semi_generator_a.pth
+│   │       ├── test_cycle_gan_semi_generator_b.pth
+│   │       ├── test_cycle_gan_un_generator_a.pth
+│   │       └── test_cycle_gan_un_generator_b.pth
+│   └── scripts
+│       ├── test_cycle_gan.py
+│       ├── train_cycle_gan.py
+│       └── utils.py
+├── Demo.ipynb
+├── directory_structure
+├── LICENSE
+├── OCNet
+│   ├── data
+│   │   └── dataset
+│   │       ├── cityscapes
+│   │       ├── cityscapes.py
+│   │       ├── __init__.py
+│   │       ├── list
+│   │       │   └── cityscapes
+│   │       │       ├── class_train.lst
+│   │       │       ├── demo.lst
+│   │       │       ├── test.lst
+│   │       │       ├── train.lst
+│   │       │       ├── train+.lst
+│   │       │       ├── train++.lst
+│   │       │       ├── trainval.lst
+│   │       │       └── val.lst
+│   ├── LICENSE
+│   ├── model
+│   │   ├── config
+│   │   │   ├── __init__.py
+│   │   │   └── __pycache__
+│   │   │       └── __init__.cpython-37.pyc
+│   │   ├── network
+│   │   │   ├── __init__.py
+│   │   │   ├── resnet101_asp_oc.py
+│   │   │   ├── resnet101_baseline.py
+│   │   │   ├── resnet101_base_oc.py
+│   │   │   └── resnet101_pyramid_oc.py
+│   │   └── oc_module
+│   │       ├── asp_oc_block.py
+│   │       ├── base_oc_block.py
+│   │       ├── __init__.py
+│   │       ├── __pycache__
+│   │       │   ├── asp_oc_block.cpython-37.pyc
+│   │       │   ├── base_oc_block.cpython-37.pyc
+│   │       │   └── pyramid_oc_block.cpython-37.pyc
+│   │       └── pyramid_oc_block.py
+│   ├── output
+│   │   ├── checkpoint
+│   │   │   ├── CS_scenes_40000.pth
+│   │   │   ├── CS_scenes_60000.pth
+│   │   │   |── events.out.tfevents.1575880980.b779f3c6dc71
+│   │   ├── log
+│   │   │   ├── log_test
+│   │   │   │   ├── demo.log
+│   │   │   │   ├── log_result_resnet101_asp_oc_dsn_test_1e-2_5e-4_5_60000_whole
+│   │   │   │   ├── log_result_resnet101_asp_oc_dsn_train_1e-2_5e-4_5_60000_whole
+│   │   │   │   └── log_result_resnet101_asp_oc_dsn_val_1e-2_5e-4_5_60000_whole
+│   │   │   └── log_train
+│   │   │       └── log_resnet101_asp_oc_dsn_1e-2_5e-4_5_60000
+│   │   └── visualize
+│   │       └── demo
+│   │           ├── frankfurt_000000_000294_leftImg8bit.png
+│   │           ├── frankfurt_000000_000576_leftImg8bit.png
+│   │           ├── frankfurt_000000_021667_leftImg8bit.png
+│   │           ├── munster_000151_000019_leftImg8bit.png
+│   │           ├── munster_000155_000019_leftImg8bit.png
+│   │           ├── munster_000171_000019_leftImg8bit.png
+│   │           ├── munster_000172_000019_leftImg8bit.png
+│   │           └── munster_000173_000019_leftImg8bit.png
+│   └── scripts
+│       ├── _config.yml
+│       ├── eval.py
+│       ├── generate_submit.py
+│       ├── inplace_abn
+│       │   ├── bn.py
+│       │   ├── functions.py
+│       │   ├── __init__.py
+│       │   ├── __pycache__
+│       │   │   ├── bn.cpython-37.pyc
+│       │   │   └── functions.cpython-37.pyc
+│       │   └── src
+│       │       ├── common.h
+│       │       ├── inplace_abn.cpp
+│       │       ├── inplace_abn_cpu.cpp
+│       │       ├── inplace_abn_cuda.cu
+│       │       └── inplace_abn.h
+│       ├── inplace_abn_03
+│       │   ├── LICENSE
+│       │   ├── licenses.csv
+│       │   ├── modules
+│       │   │   ├── bn.py
+│       │   │   ├── build.py
+│       │   │   ├── build.sh
+│       │   │   ├── dense.py
+│       │   │   ├── _ext
+│       │   │   │   ├── __ext.so
+│       │   │   │   └── __init__.py
+│       │   │   ├── functions.py
+│       │   │   ├── __init__.py
+│       │   │   ├── misc.py
+│       │   │   ├── residual.py
+│       │   │   └── src
+│       │   │       ├── bn.cu
+│       │   │       ├── bn.h
+│       │   │       ├── bn.o
+│       │   │       ├── common.h
+│       │   │       ├── lib_cffi.cpp
+│       │   │       └── lib_cffi.h
+│       │   ├── README.md
+│       │   └── requirements.txt
+│       ├── run_resnet101_baseline.sh
+│       ├── train.py
+│       └── utils
+│           ├── criterion.py
+│           ├── files.py
+│           ├── __init__.py
+│           ├── loss.py
+│           ├── metric.py
+│           ├── operator.py
+│           ├── parallel.py
+│           ├── resnet_block.py
+│           └── utils.py
+├── README.md
+└── requirements.txt
+
+.
+├── CycleGAN
+├── Demo.ipynb
+├── directory_structure
+├── LICENSE
+├── OCNet
+├── README.md
+└── requirements.txt
+
+2 directories, 5 files

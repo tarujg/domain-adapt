@@ -14,15 +14,16 @@ import torch, cv2
 import numpy as np
 import sys
 import pdb
-
+import sys
+sys.path.insert(1, '/home/project/domain-adapt')
 from torch.autograd import Variable
 import torchvision.models as models
 import torch.nn.functional as F
 from torch.utils import data
 from collections import OrderedDict
-from dataset import get_segmentation_dataset
-from network import get_segmentation_model
-from config import Parameters
+from OCNet.data.dataset import get_segmentation_dataset
+from OCNet.model.network import get_segmentation_model
+from OCNet.model.config import Parameters
 import os
 import scipy.ndimage as nd
 from math import ceil

@@ -9,12 +9,45 @@ _**Contributors:** Atman Patel, Mudit Jain, Taruj Goyal, and Harshita Krishna (T
 
 Project Organization
 ------------
-
-    ├── README.md   		<- The top-level README for developers using this project.
-    ├── cycleGAN    		<- cycleGANs for image-to-image translation
-    ├── OCNet       		<- Semantic segmentation module
-	    ├── run_asp_oc.sh	<- Training, validating, testing script
-    ├── run.ipynb   		<- Jupyter Notebook for quick demo
+├── CycleGAN
+│   ├── data
+│   │   ├── data_loader.py
+│   │   └── test_images
+│   ├── model
+│   │   ├── cycle_gan.py
+│   │   ├── networks.py
+│   │   ├── params.yaml
+│   │   └── saved_models
+│   └── scripts
+│       ├── test_cycle_gan.py
+│       ├── train_cycle_gan.py
+│       └── utils.py
+├── Demo.ipynb
+├── directory_structure
+├── LICENSE
+├── OCNet
+│   ├── data
+│   │   └── dataset
+│   ├── LICENSE
+│   ├── model
+│   │   ├── config
+│   │   ├── network
+│   │   └── oc_module
+│   ├── output
+│   │   ├── checkpoint
+│   │   ├── log
+│   │   └── visualize
+│   └── scripts
+│       ├── _config.yml
+│       ├── eval.py
+│       ├── generate_submit.py
+│       ├── inplace_abn
+│       ├── inplace_abn_03
+│       ├── run_resnet101_baseline.sh
+│       ├── train.py
+│       └── utils
+├── README.md
+└── requirements.txt
 
 Requirements
 -----------
@@ -52,8 +85,7 @@ We are currently using [Cityscapes](https://www.cityscapes-dataset.com/), GTA2Ci
 
 | Cityscapes | GTA5 | GTA2Cityscapes
 |:------:|:------:|:------:|
-|[link]([https://www.cityscapes-dataset.com/](https://www.cityscapes-dataset.com/))|[link]([https://download.visinf.tu-darmstadt.de/data/from_games/](https://download.visinf.tu-darmstadt.de/data/from_games/))|[link]([http://efrosgans.eecs.berkeley.edu/cyclegta/cityscapes2gta.zip](http://efrosgans.eecs.berkeley.edu/cyclegta/cityscapes2gta.zip))
-
+|[link](https://www.cityscapes-dataset.com/)|[link](https://download.visinf.tu-darmstadt.de/data/from_games/)|[link](http://efrosgans.eecs.berkeley.edu/cyclegta/cityscapes2gta.zip)
 
 #### References and used code sources
 - [InplaceABN](https://github.com/mapillary/inplace_abn)
