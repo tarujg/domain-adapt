@@ -9,6 +9,7 @@ _**Contributors:** Atman Patel, Mudit Jain, Taruj Goyal, and Harshita Krishna (T
 
 Project Organization
 ------------
+```
 ├── CycleGAN
 │   ├── data
 │   │   ├── data_loader.py
@@ -48,7 +49,7 @@ Project Organization
 │       └── utils
 ├── README.md
 └── requirements.txt
-
+```
 Requirements
 -----------
  - Python 3.6+
