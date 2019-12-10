@@ -79,6 +79,10 @@ $ sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
 $ sudo systemctl restart docker
 ```
 
+#### Running Demo
+1. Download cityspaces data to OCNet/data/data
+2. Download trained model from [link](https://drive.google.com/open?id=1Kwk6yLK57ZbRk90fTwg9o1MH0Par1-v8i) to OCNet/output/checkpoint
+
 ---
 ## Datasets
 We are currently using [Cityscapes](https://www.cityscapes-dataset.com/), GTA2Cityscapes and [GTA5](https://download.visinf.tu-darmstadt.de/data/from_games/) dataset for our project.
@@ -94,9 +98,14 @@ We are currently using [Cityscapes](https://www.cityscapes-dataset.com/), GTA2Ci
 - [PyTorch-Encoding](https://github.com/zhanghang1989/PyTorch-Encoding)
 - [semantic-segmentation-pytorch](https://github.com/CSAILVision/semantic-segmentation-pytorch)
 ```
-TODO: Add citations here
-1. OCNet
-2. CycleGAN
+Citations:
+
+1. Yuhui Yuan, Jingdong Wang and Microsoft Research. “OCNet: Object Context Network for Scene Parsing”. In: 2018
+https://arxiv.org/pdf/1809.00916.pdf
+
+2. Zhu, Jun-Yan, Taesung Park, Phillip Isola, and Alexei A. Efros. "Unpaired image-to-image translation using cycle-consistent adversarial networks." In Proceedings of the IEEE international conference on computer vision, pp. 2223-2232. 2017.
+https://arxiv.org/pdf/1703.10593.pdf
+
 ```
 
 #### Please contact us if you have any questions.
