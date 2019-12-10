@@ -10,13 +10,13 @@ import sys
 sys.path.insert(1, './../')
 
 
-from scripts.utils import EpochTracker, weights_init_normal
-from model.networks import CycleGanDiscriminator, CycleGanResnetGenerator
+from CycleGAN.scripts.utils import EpochTracker, weights_init_normal
+from CycleGAN.model.networks import CycleGanDiscriminator, CycleGanResnetGenerator
 
 
 class CycleGAN:
 
-    def __init__(self, device, file_prefix, learning_rate, beta1,
+    def __init__(self, device, file_prefix, learning_rate=0.002, beta1=0.5,
                  train=False, semi_supervised=False):
         print("Starting Cycle Gan with Train = {} and Semi Supervised = {}".format(train, semi_supervised))
         
@@ -101,6 +101,9 @@ class CycleGAN:
         loss_d.backward()
 
         return loss_d
+
+    def get_generated_image(self):
+        return self.fake_A.data
 
     def backward_g(self):
         valid = Variable(Tensor(np.ones((self.real_A.size(0), 1))), requires_grad=False).to(self.device)
