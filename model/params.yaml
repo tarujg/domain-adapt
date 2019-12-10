@@ -1,6 +1,5 @@
 b1: 0.5
 b2: 0.99
-alpha: 0.9
 batch_size: 1
 channels: 3
 checkpoint_interval: 1

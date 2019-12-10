@@ -1,15 +1,12 @@
 import torch
 from torch import Tensor
 from torch.autograd import Variable
-
-# from cycle_gan import CycleGAN
-# from data_loader_test import DataLoader
-# from data_loader import TestDataSet
 from logger import logger
-# from utils import ensure_dir, get_opts
 from torch.utils.data import DataLoader
 
+import os
 import sys
+from os.path import dirname
 sys.path.insert(1, './../')
 
 from model.cycle_gan import CycleGAN
@@ -18,7 +15,8 @@ from scripts.utils import ensure_dir, get_opts
 
 
 project_root = "./../"
-data_root = project_root + "data/" #"/Users/patel/Documents/Coursework/ECE285/Project/GTA-to-Cityscapes-Domain-Adaptation/my_input/"
+# project_root = dirname(dirname(os.getcwd()))
+data_root = project_root + "data/" 
 models_prefix = project_root + "model/saved_models/test_"
 images_prefix = project_root + "data/my_saved_images/"
 

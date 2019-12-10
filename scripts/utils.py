@@ -3,6 +3,7 @@ import yaml
 import pickle
 import glob
 import torch
+import sys
 import numpy as np
 from torch.autograd import Variable
 from torchvision.utils import save_image
@@ -21,7 +22,8 @@ def weights_init_normal(m):
 
 
 def get_opts():
-    with open("../model/params.yaml", 'r') as stream:
+    sys.path.insert(1, './../')
+    with open("model/params.yaml", 'r') as stream:
         data_loaded = yaml.load(stream)
         return data_loaded
 

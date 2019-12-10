@@ -16,9 +16,9 @@ from model.networks import CycleGanDiscriminator, CycleGanResnetGenerator
 
 class CycleGAN:
 
-    def __init__(self, device, file_prefix, learning_rate, beta1,
-                 train=False, semi_supervised=False):
-        print("Starting Cycle Gan with Train = {} and Semi Supervised = {}".format(train, semi_supervised))
+    def __init__(self, device, file_prefix, learning_rate=0.0002, beta1=0.5,
+                 train=False, semi_supervised=True):
+        # print("Starting Cycle Gan with Train = {} and Semi Supervised = {}".format(train, semi_supervised))
         
         if semi_supervised:
             self.architecture = 'cycle_gan_semi_'
@@ -176,8 +176,11 @@ class CycleGAN:
         self.epoch_tracker.write(epoch, iteration)
 
     def save_image(self, path, name):
-        save_image(self.fake_A.data, path + "{}_fakeA.png".format(name), normalize=True)
+        save_image(self.fake_A.data, path + "{}.png".format(name), normalize=True)
         # save_image(self.fake_B.data, path + "{}_fakeB.png".format(name), normalize=True)
+    
+    def get_generated_image(self):
+        return self.fake_A.data
 
     @staticmethod
     def set_requires_grad(nets, requires_grad=False):
