@@ -109,7 +109,7 @@ https://arxiv.org/pdf/1703.10593.pdf
 ```
 
 #### Please contact us if you have any questions.
-Atman Patel at <a2patel@ucsd.edu>
-Taruj Goyal at <tgoyal@ucsd.edu>
-Mudit Jain at <mujain@ucsd.edu>
-Harshita Krishna at <h1krishn@ucsd.edu>
+- Atman Patel at <a2patel@ucsd.edu>
+- Taruj Goyal at <tgoyal@ucsd.edu>
+- Mudit Jain at <mujain@ucsd.edu>
+- Harshita Krishna at <h1krishn@ucsd.edu>
